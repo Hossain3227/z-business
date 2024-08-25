@@ -1,8 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { useContext } from "react";
 
 
 const Header = () => {
 
+
+  const {user, logOut} = useContext(AuthContext);
+  
     const links = <>
     
 
@@ -31,7 +36,37 @@ const Header = () => {
   <div className="navbar-end">
     
         
+  {
+        !user && (
             <Link to={'/login'} className="btn">Login</Link>
+        )
+    }
+
+{
+    user && (
+        <div className="dropdown dropdown-end navbar-end">
+      <div tabIndex={0} role="button" className="btn btn-ghost navbar-end btn-circle avatar">
+        <div title={user?.displayName} className="w-10 rounded-full">
+          
+          
+          <img className="" alt="Tailwind CSS Navbar component" src={user?.photoURL} />
+        </div>
+      </div>
+      <ul tabIndex={0} className="mt-3 z-[50] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+        <li>
+          <Link to={'/add-volunteer'} className="justify-between">
+            Add new item
+          </Link>
+        </li>
+        <li><Link to={'/my-post'}>Manage My item</Link></li>
+        <li><Link to={'/my-req'}>my requests</Link></li>
+        <li><button onClick={logOut}>
+          Logout
+          </button></li>
+      </ul>
+    </div>
+    )
+ }
         
     
  
