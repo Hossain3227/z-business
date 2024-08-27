@@ -4,6 +4,7 @@ import Home from "../pages/home";
 import Login from "../layout/login";
 import Register from "../layout/register";
 import Errorpage from "../pages/errorpage";
+import Allitems from "../pages/allitems";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
         {
           path:'/register',
           element:<Register></Register>,
+        },
+        {
+          path:'/allitems',
+          element:<Allitems></Allitems>,
+          loader: () => fetch('http://localhost:5000/items')
         }
       ]
     },

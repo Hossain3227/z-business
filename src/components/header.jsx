@@ -12,7 +12,7 @@ const Header = () => {
     
 
     <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/allcard'>All items</NavLink></li>
+    <li><NavLink to='/allitems'>All items</NavLink></li>
     </>
 
     return (
