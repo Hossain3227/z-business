@@ -24,7 +24,7 @@ const Singleitem = ({item}) => {
             <span className= "text-red-800 bg-red-200 px-3 py-1 rounded-lg">Price:{price}</span>
         </div>
         <div className="card-actions">
-      <Link to={``} className="btn btn-primary">View Details</Link>
+      <Link to={`/items/${_id}`} className="btn btn-primary">View Details</Link>
     </div>
   </div>
 </div>
