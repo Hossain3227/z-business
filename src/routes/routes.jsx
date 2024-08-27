@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         {
             path: '/',
             element:<Home></Home>,
-            loader: () => fetch('http://localhost:5000/items'),
+            loader: () => fetch('https://handcraft-server.vercel.app/items'),
 
         },
         {
@@ -32,12 +32,12 @@ const router = createBrowserRouter([
         {
           path:'/allitems',
           element:<Allitems></Allitems>,
-          loader: () => fetch('http://localhost:5000/items')
+          loader: () => fetch('https://handcraft-server.vercel.app/items')
         },
         {
           path:'/items/:id',
             element:<Itemdetails></Itemdetails>,
-            loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
+            loader: ({params}) => fetch(`https://handcraft-server.vercel.app/items/${params.id}`)
         },
         {
           path:'/contacts',

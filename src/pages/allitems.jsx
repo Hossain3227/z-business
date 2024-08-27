@@ -19,7 +19,7 @@ const Allitems = () => {
     const [items, setitems] = useState([])
         useEffect(() => {
         const getData = async () => {
-        const { data } = await axios(`http://localhost:5000/all-vols?page=${current}&size=${ipages}&filter=${filter}&search=${search}`)
+        const { data } = await axios(`https://handcraft-server.vercel.app/all-vols?page=${current}&size=${ipages}&filter=${filter}&search=${search}`)
         setitems(data)
         
         }
@@ -30,7 +30,7 @@ const Allitems = () => {
         
         useEffect(() => {
         const getSum = async () => {
-        const { data } = await axios(`http://localhost:5000/vol-sum?filter=${filter}&search=${search}`)
+        const { data } = await axios(`https://handcraft-server.vercel.app/vol-sum?filter=${filter}&search=${search}`)
         
         setsum(data.sum)
         }
