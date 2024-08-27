@@ -7,6 +7,7 @@ import Errorpage from "../pages/errorpage";
 import Allitems from "../pages/allitems";
 import Itemdetails from "../pages/itemdetails";
 import Contacts from "../pages/contacts";
+import Businessb from "../pages/businessb";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         {
           path:'/contacts',
           element:<Contacts></Contacts>
+      },
+      {
+        path:'/business',
+        element: <Businessb></Businessb>
       },
       ]
     },

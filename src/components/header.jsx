@@ -29,6 +29,7 @@ const Header = () => {
 
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/allitems'>All items</NavLink></li>
+    <li><NavLink to='/business'>Business</NavLink></li>
     <li><NavLink to='/contacts'>Contact</NavLink></li>
     </>
 
@@ -43,7 +44,7 @@ const Header = () => {
         <li>{links}</li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl"><span className="text-orange-500 m-0">Z</span>handicraft</a>
+    <a className="btn btn-ghost text-xl"><span className="text-orange-500 m-0">Bangladeshi</span>handicraft</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

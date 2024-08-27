@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="footer p-10 bg-base-200 text-base-content mt-10">
   <aside className="flex flex-col items-center">
     
-  <p className="btn btn-ghost text-xl"><span className="text-orange-500 m-0">Z</span>handicraft</p>
+  <p className="btn btn-ghost text-xl"><span className="text-orange-500 m-0">Bangladeshi</span>handicraft</p>
 
   <nav className="flex flex-col items-center">
     <h6 className="footer-title">Social</h6>
